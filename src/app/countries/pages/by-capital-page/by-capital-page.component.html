@@ -2,15 +2,21 @@
 <hr>
 <div class="row">
     <div class="col">
+        <!--(onValue)="searchByCapital($event)"-->
         <shared-search-box 
             placeholder="Buscar por capital"
-            (onValue) = "searchByCapital($event)"
-        ></shared-search-box>
+            [initialValue] = 'initialterm'
+            (onDebounce)="searchByCapital($event)"
+            ></shared-search-box>
     </div>
 </div>
 <div class="row">
     <div class="col">
         <hr>
+        @if(isloading){
+        <shared-loading-spinner></shared-loading-spinner>
+        }
+
         <countries-table [countries]="countries"></countries-table>
     </div>
 </div>

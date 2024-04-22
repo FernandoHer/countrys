@@ -15,7 +15,6 @@ import { HttpClientModule } from '@angular/common/http';
         HomePageComponent,
         AboutPageComponent,
         SidebarComponent,
-        HttpClientModule
     ]
 })
 export class AppComponent {
